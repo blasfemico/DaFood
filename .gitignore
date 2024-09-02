@@ -14,6 +14,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.venv
 
 # Entorno de desarrollo
 .DS_Store
