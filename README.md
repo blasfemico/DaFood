@@ -1,4 +1,3 @@
-Entendido, aquí te dejo la documentación enfocada para que el equipo de frontend pueda comprender cómo interactuar con el backend del proyecto DaFood.
 DaFood - Documentación para el Equipo de Frontend
 Descripción General
 
