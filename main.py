@@ -1,4 +1,4 @@
-# backend/src/main.py
+
 from fastapi import FastAPI
 from backend.src.api.api import api_router
 from backend.src.config.database import engine, Base
