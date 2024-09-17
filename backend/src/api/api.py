@@ -1,6 +1,6 @@
 # backend/src/api/api.py
 from fastapi import APIRouter
-from .routers import users, sectores
+from .routers import users, sectores, payment
 
 
 api_router = APIRouter()
