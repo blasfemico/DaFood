@@ -57,3 +57,14 @@ class SectorService:
             raise HTTPException(status_code=404, detail="Sector no encontrado")
         
         return db.query(Mesa).filter(Mesa.sector_id == sector_id).all()
+
+    @staticmethod
+    def update_sector(db: Session, sector_id: int, sector_update: SectorCreate):
+        sector = db.query(Sector).filter(Sector.id == sector_id).first()
+        if not sector:
+            raise HTTPException(status_code=404, detail="Sector no encontrado")
+        
+        sector.nombre = sector_update.nombre
+        db.commit()
+        db.refresh(sector)
+        return sector

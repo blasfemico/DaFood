@@ -23,9 +23,9 @@ class PaymentService:
                 "email": "email_del_cliente@ejemplo.com"  # Cambiar por el email del cliente
             },
             "back_urls": {
-                "success": "https://tusitio.com/success",  # URL de éxito
-                "failure": "https://tusitio.com/failure",  # URL de fallo
-                "pending": "https://tusitio.com/pending"   # URL de estado pendiente
+                "success": "https://ripe-carpets-return.loca.lt/success",  # URL de éxito
+                "failure": "https://ripe-carpets-return.loca.lt/failure",  # URL de fallo
+                "pending": "https://ripe-carpets-return.loca.lt/pending"   # URL de estado pendiente
             },
             "auto_return": "approved"
         }
