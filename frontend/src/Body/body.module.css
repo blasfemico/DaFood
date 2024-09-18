@@ -1,0 +1,52 @@
+.BodyContainer {
+  color: white;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-right: 10%;
+  margin-left: 10%;
+  align-items: start;
+  height: 80vh;
+  scroll-snap-type: y mandatory;
+}
+
+.DescriptionContainer {
+  font-size: 200%;
+  text-align: start;
+  margin-bottom: 8%;
+}
+
+.DescriptionContainer h1,
+p {
+  margin-bottom: 2%;
+}
+
+.DescriptionContainer h5 {
+  margin-bottom: 3%;
+}
+
+.TittleColor {
+  color: #ff3c3c;
+}
+
+.IconContainer {
+  align-items: start;
+  display: flex;
+  gap: 60px;
+}
+
+.Icons {
+  text-align: center;
+  color: #ffffff;
+}
+
+.Icon {
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: #ff3c3c;
+}
+
+.IconContainer p {
+  font-size: 20px;
+}

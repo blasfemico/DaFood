@@ -1,0 +1,107 @@
+.FormContainer {
+  height: 80vh;
+  width: 100%;
+}
+
+.FormContainer h2 {
+  margin-left: 10%;
+  position: absolute;
+  color: white;
+  padding: 1%;
+}
+
+.FormContainer h2 b {
+  color: #ff3c3c;
+}
+
+.FormContent {
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 80%;
+  background-color: #231b27;
+  box-shadow: 10px 20px 30px 5px #0f0a1383;
+  padding: 5%;
+  gap: 10%;
+  font-size: 24px;
+  color: white;
+}
+
+.InfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  padding: 5% 5% 5% 5%;
+  flex: 1.5;
+}
+
+.InfoContainer h1 {
+  color: #ff3c3c;
+}
+
+.InfoContainer h1::first-letter {
+  border-bottom: 2px solid #ff3c3c;
+}
+
+.ItemsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0%;
+  margin-left: auto;
+  border-radius: 10px;
+  padding: 2%;
+  flex: 1.5;
+  gap: 10%;
+  background-color: #281f2c93;
+}
+
+.ItemsContainer input {
+  margin-top: 1%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: #ff3c3c;
+  outline: none;
+  padding: 0;
+  height: 50%;
+  font-size: 100%;
+  width: 100%;
+}
+
+.ItemsContainer input:focus {
+  border-bottom: 1px solid #5a4863;
+}
+
+.ItemsContainer label {
+  font-size: 20px;
+  color: #5a4863;
+}
+
+.ItemsContainer label:focus {
+  margin: 1%;
+}
+
+.SpanMsgRed {
+  font-size: 15px;
+  color: red;
+}
+
+.FormButton {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #231b27;
+  border: none;
+  font-size: 20px;
+  color: #5a4863;
+  cursor: pointer;
+  margin-right: auto;
+  height: 150px;
+  text-align: center;
+}
+
+.FormButton:hover {
+  color: #231b27;
+  background-color: #ff3c3c;
+}

@@ -1,0 +1,15 @@
+.InfoContainer {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10%;
+  width: 100%;
+  margin-left: 2%;
+}
+
+.InfoContainer li {
+  margin-bottom: 2%;
+}
+
+.InfoContainer b {
+  color: #ff3c3c;
+}
