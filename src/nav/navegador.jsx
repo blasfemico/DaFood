@@ -23,9 +23,9 @@ export const Navegador = () => {
   return (
     <nav className={NavStyle.NavContainer} ref={navRef}>
       <ul className={NavStyle.NavUl}>
-          <h1>
-            <b className={NavStyle.TittleColor}>Da</b>Food
-          </h1>
+        <h1>
+          <b className={NavStyle.TittleColor}>Da</b>Food
+        </h1>
         <li className={NavStyle.NavLi}>
           <a href="#" id="border-button" className={NavStyle.NavA}>
             Home
@@ -38,7 +38,7 @@ export const Navegador = () => {
         </li>
         <li className={NavStyle.NavLi}>
           <a href="#" id="border-button" className={NavStyle.NavA}>
-            Referencias
+            Servicios
           </a>
         </li>
         <div className={NavStyle.LoginRegisterContainer}>
