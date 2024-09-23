@@ -1,0 +1,29 @@
+.AboutUsContainer {
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4%;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 5%;
+  background-color: #17121a;
+  box-shadow: 10px 20px 30px 5px #0f0a1383;
+  font-size: 21px;
+  color: white;
+  padding: 5%;
+}
+
+.Container1 {
+  flex: 1;
+}
+
+.Container1 h1 {
+  color: #ff3c3c;
+  margin-bottom: 5%;
+}
+
+.Container1 p {
+  font-weight: 200;
+  text-align: start;
+}

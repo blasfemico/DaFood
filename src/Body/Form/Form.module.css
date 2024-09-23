@@ -1,0 +1,121 @@
+.FormContainer {
+  height: 85vh;
+  width: 100%;
+  position: relative;
+}
+
+.FormContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 100%;
+  background-color: #17121a;
+  box-shadow: 10px 20px 30px 5px #0f0a1383;
+  padding: 3%;
+  gap: 10%;
+  font-size: 24px;
+  color: white;
+}
+
+.InfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  padding: 5%;
+  flex: 1.5;
+}
+
+.InfoContainer h1 {
+  color: #ff3c3c;
+}
+
+.InfoContainer h1::first-letter {
+  border-bottom: 2px solid #ff3c3c;
+}
+
+.ItemsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  padding: 5% 2% 4% 10%;
+  flex: 2;
+  gap: 5%;
+  border-left: 1px solid #5a4863;
+}
+
+.ItemsContainer h1 {
+  color: #ff3c3c;
+}
+
+.ItemsContainer input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #5a4863;
+  color: #ff3c3c;
+  outline: none;
+  padding: 0;
+  height: 50px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.ItemsContainer input:focus {
+  border-bottom: 1px solid #ffffff;
+}
+
+.ItemsContainer label {
+  font-size: 20px;
+  color: #796185;
+}
+
+.ItemsContainer label:focus {
+  margin: 1%;
+}
+
+.SpanMsgRed {
+  font-size: 15px;
+  color: #aa2f2f;
+}
+
+.FormButtons {
+  display: flex;
+  width: 100%;
+  gap: 5%;
+}
+
+.ButtonRegister {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #231b27;
+  border: none;
+  font-size: 20px;
+  color: #5a4863;
+  cursor: pointer;
+  margin-right: auto;
+  height: 70px;
+  text-align: center;
+}
+
+.ButtonRegisterContainer {
+  flex: 1.5;
+}
+
+.ButtonRegister:hover {
+  color: #231b27;
+  background-color: #ff3c3c;
+}
+
+.ButtonLogin {
+  color: white;
+  font-size: 18px;
+  text-align: end;
+  margin-top: 5%;
+  flex: 1;
+}
+
+.ButtonLogin:hover {
+  color: #ff3c3c;
+}
