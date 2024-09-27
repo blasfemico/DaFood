@@ -10,3 +10,4 @@ pydantic-settings
 pydantic[email]
 python-multipart
 mercadopago
+PyQt5
