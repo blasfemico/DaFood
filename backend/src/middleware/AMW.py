@@ -18,7 +18,7 @@ class AuthMiddleware:
         self.ACCESS_TOKEN_EXPIRE_MINUTES = ACCESS_TOKEN_EXPIRE_MINUTES
 
     def get_current_user(self, token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
-        from ..services.user_services import UserService  # Evitar circular importaciones
+        from ..services.user_services import UserService
 
         credentials_exception = HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -26,20 +26,17 @@ class AuthMiddleware:
             headers={"WWW-Authenticate": "Bearer"},
         )
         try:
-            # Decodificar el token JWT
             payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-            user_id: int = payload.get("sub")  # Aquí usamos "sub" para obtener el ID del usuario
+            user_id: int = payload.get("sub")
             if user_id is None:
                 raise credentials_exception
         except JWTError:
             raise credentials_exception
 
-        # Buscar al usuario en la base de datos por ID
-        user = UserService.get_user_by_id(db, user_id)  # Cambio para buscar por ID
+        user = UserService.get_user_by_id(db, user_id)
         if user is None:
             raise credentials_exception
 
-        # Retornar el usuario junto con su plan
         return user
 
     def create_access_token(self, data: dict, expires_delta: timedelta = None):

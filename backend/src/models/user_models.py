@@ -8,6 +8,6 @@ class User(Base):
     name = Column(String, index=True)
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
-    rol = Column(String, default="empleado")  # Agregar campo de rol
-    plan = Column(String, default="basico")  # Agregar campo de plan
+    rol = Column(String, default="empleado")
+    plan = Column(String, default="basico")
     is_superuser = Column(Boolean, default=False)

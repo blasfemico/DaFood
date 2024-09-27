@@ -15,7 +15,6 @@ auth_middleware = AuthMiddleware()
 def register(user: UserCreate, db: Session = Depends(get_db)):
     return UserService.create_user(db, user)
 
-
 @router.post("/login")
 def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     user = UserService.authenticate_user(db, form_data.username, form_data.password)
@@ -24,7 +23,6 @@ def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depend
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid credentials",
         )
-    # Generar el token JWT
     access_token_expires = timedelta(minutes=30)
     access_token = auth_middleware.create_access_token(
         data={"sub": str(user.id)}, expires_delta=access_token_expires
@@ -37,6 +35,4 @@ def read_users_me(current_user: UserResponse = Depends(auth_middleware.get_curre
 
 @router.patch("/users/{user_id}/plan", response_model=UserResponse)
 def update_user_plan(user_id: int, new_plan: str, db: Session = Depends(get_db), current_user: UserResponse = Depends(auth_middleware.get_current_user)):
-    # Validamos que solo ciertos usuarios puedan cambiar a "intermedio" o "avanzado"
     return UserService.update_user_plan(db, user_id, new_plan, current_user)
-

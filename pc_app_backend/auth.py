@@ -25,12 +25,19 @@ class LoginWindow(QWidget):
 
         self.setLayout(layout)
 
+
     def handle_login(self):
-        email = self.email.text()
-        password = self.password.text()
-        response = post("users/login", {"email": email, "password": password})
+        email = self.email.text().strip()
+        password = self.password.text().strip()
+
+        if not email or not password:
+            QMessageBox.warning(self, "Error", "Both fields are required")
+            return
+
+        data = {"username": email, "password": password}
+        response = post("users/login", data)
+
         if "access_token" in response:
             QMessageBox.information(self, "Success", "Login successful!")
-            # Redirigir a la pantalla principal
         else:
             QMessageBox.warning(self, "Error", "Invalid credentials")

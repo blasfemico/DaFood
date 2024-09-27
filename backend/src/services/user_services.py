@@ -32,10 +32,9 @@ class UserService:
 
     @staticmethod
     def authenticate_user(db: Session, email: str, password: str) -> User:
-        # Buscar el usuario por email
         user = db.query(User).filter(User.email == email).first()
         if not user or not pwd_context.verify(password, user.hashed_password):
-            return None  # Si no encuentra el usuario o la contraseña no es válida
+            return None
         return user
 
     @staticmethod
@@ -45,11 +44,17 @@ class UserService:
         if not user:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Usuario no encontrado")
 
-        # Solo permitir cambiar el plan a intermedio o avanzado si el usuario es admin
         if new_plan in ["intermedio", "avanzado"] and current_user.rol != "admin":  
             raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="No tienes permiso para cambiar al plan superior.")
 
         user.plan = new_plan
         db.commit()
         db.refresh(user)
+        return user
+
+    @staticmethod
+    def get_user_by_id(db: Session, user_id: int) -> User:
+        user = db.query(User).filter(User.id == user_id).first()
+        if not user:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Usuario no encontrado")
         return user
