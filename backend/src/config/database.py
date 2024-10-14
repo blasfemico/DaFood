@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # Configuración directa de la base de datos
-DATABASE_URL = "postgresql://postgres:dante20121@localhost/DaFood"
+DATABASE_URL = "postgresql://postgres:dante20121@DaFood/DaFood"
 MERCADOPAGO_ACCESS_TOKEN= "TEST-1913182024650502-091621-7b06e528c143a007a993eec7801d14c4-212790061"
 
 # Crear la conexión con la base de datos
