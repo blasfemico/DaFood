@@ -13,3 +13,4 @@ mercadopago
 PyQt5
 websockets
 matplotlib
+python-dotenv

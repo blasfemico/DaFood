@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from datetime import timedelta, datetime
 from jose import JWTError, jwt
 from fastapi import Depends, HTTPException, status
@@ -5,8 +7,11 @@ from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 from ..config.database import get_db
 
+# Cargar las variables de entorno desde el archivo .env
+load_dotenv()
+
 # Configuración de JWT y seguridad
-SECRET_KEY = "supersecretkey"  # Asegúrate de mover esta clave a una variable de entorno en producción
+SECRET_KEY = os.getenv("SECRET_KEY")  # Mover la clave a una variable de entorno
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 

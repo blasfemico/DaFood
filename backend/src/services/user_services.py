@@ -5,6 +5,7 @@ from ..models.user_models import User
 from ..schemas.user_schemas import UserCreate
 from passlib.context import CryptContext
 
+# Crear un contexto de hashing
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 class UserService:
